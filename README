@@ -1,0 +1,23 @@
+C Program | UDP+TCP Data Transfer | Created by: Cory Sollberger 5/5/16
+
+This program is a UDP layer data transfer that is safely handled by TCP acknowledgement.
+A Client program requests a file from the server from which it is sent the data in UDP packets.
+
+The UDP packets are then identified, checked, and acknowledged upon receipt through TCP packets.
+
+Data that is lost in transit is requested again through TCP, which then fires a message to the
+UDP protocol to resend the desired packet.
+
+Run the program by building through the makefile included or by using the pre-built object files.
+
+Run the command "./udpServer.o" on the server computer
+
+Run the command "./udpClient.o" on the client computer
+
+The server needs to be running before the client can connect to it.
+
+Included are several textfiles that hold example data to transfer.
+
+The file built from the transfer is called "RESULTS.txt"
+
+Run a md5checksum on the file transferred and the file received to verify.
